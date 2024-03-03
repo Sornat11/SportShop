@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SportShop.Models.DbModels.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Order Date</th>
+        <th></th>
+    </tr>
+
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.OrderID</td>
+            <td>@order.Customer.FirstName @order.Customer.LastName</td>
+            <td>@order.Product.ProductName</td>
+            <td>@order.Quantity</td>
+            <td>@order.OrderDate.ToShortDateString()</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = order.OrderID })">Edit</a> |
+                <a href="@Url.Action("Details", new { id = order.OrderID })">Details</a> |
+                <a href="@Url.Action("Delete", new { id = order.OrderID })">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>

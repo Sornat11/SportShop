@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Sklep sportowy - Home";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        h1 {
+            font-family: Arial, sans-serif; 
+            font-size: 70px; 
+            color: #000000; 
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 80px; 
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px; 
+        }
+
+        .btn {
+            margin: 10px;
+            padding: 40px 80px;
+            font-size: 22px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+            .btn::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.3);
+                transform: perspective(1000px) rotateX(-90deg);
+                transition: transform 0.3s ease;
+                pointer-events: none;
+            }
+
+            .btn:hover {
+                transform: translateY(-5px);
+            }
+
+                .btn:hover::before {
+                    transform: perspective(1000px) rotateX(0deg);
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Sport Shop </h1>
+        <div>
+            <a href="@Url.Action("Index","Product" )" class="btn">Products</a>
+            <a href="@Url.Action("Index","Customer")" class="btn">Customers</a>
+            <a href="@Url.Action("Index","Order")" class="btn">Orders</a>
+
+
+        </div>
+    </div>
+</body>
+</html>
