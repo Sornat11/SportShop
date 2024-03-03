@@ -2,19 +2,6 @@
 
 Welcome to the Sport Shop Web Application repository! This web application, built on the .NET platform using Entity Framework, is designed to streamline the operations of a sports store. Users can efficiently manage products, customers, and orders through a user-friendly interface.
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Business Applications](#business-applications)
-3. [Controllers](#controllers)
-    - [CustomerController](#customercontroller)
-    - [OrderController](#ordercontroller)
-    - [ProductController](#productcontroller)
-4. [Documentation and Home Controller](#documentation-and-home-controller)
-5. [Getting Started](#getting-started)
-6. [Contributing](#contributing)
-7. [License](#license)
-
 ## Project Overview
 
 The primary goal of this project is to develop a robust web application using the .NET framework with Entity Framework. The application serves as a valuable tool for the effective management of a sports store, allowing seamless handling of products, customers, and orders.
